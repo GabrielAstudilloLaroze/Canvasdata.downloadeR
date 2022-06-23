@@ -1,0 +1,71 @@
+#verbs
+
+import_data<-function(){
+  source("~/Canvas Data/RCanvas/R/import_data.R")
+}
+
+
+enrolling<-function(){
+  source("~/Canvas Data/RCanvas/R/enrolling.R")
+}
+
+
+# update<-function() {
+#   unlink("~/Canvas Data/RCanvas/gz/account_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/assignment_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/course_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/course_section_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/enrollment_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/module_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/module_item_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/quiz_dim",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/quiz_submission_fact",recursive = TRUE) &
+#     unlink("~/Canvas Data/RCanvas/gz/user_dim",recursive = TRUE)&
+#     unlink("~/Canvas Data/RCanvas/datos",recursive = TRUE)&
+#     shell('canvasDataCli fetch -c config.js -t user_dim') &
+#     shell('canvasDataCli fetch -c config.js -t enrollment_dim') &
+#     shell('canvasDataCli fetch -c config.js -t quiz_dim') &
+#     shell('canvasDataCli fetch -c config.js -t quiz_submission_fact') &
+#     shell('canvasDataCli fetch -c config.js -t module_dim') &
+#     shell('canvasDataCli fetch -c config.js -t module_item_dim') &
+#     shell('canvasDataCli fetch -c config.js -t assignment_dim') &
+#     shell('canvasDataCli unpack -c config.js -f user_dim quiz_dim enrollment_dim quiz_submission_fact') &
+#     shell('canvasDataCli unpack -c config.js -f module_dim') &
+#     shell('canvasDataCli unpack -c config.js -f module_item_dim') &
+#     shell('canvasDataCli unpack -c config.js -f assignment_dim') &
+#     shell('canvasDataCli fetch -c config.js -t account_dim') &
+#     shell('canvasDataCli unpack -c config.js -f account_dim') &
+#     shell('canvasDataCli fetch -c config.js -t course_dim') &
+#     shell('canvasDataCli unpack -c config.js -f course_dim') &
+#     shell('canvasDataCli fetch -c config.js -t course_section_dim') &
+#     shell('canvasDataCli unpack -c config.js -f course_section_dim')
+# }
+
+
+clean_env<-function() {
+  source("~/Canvas Data/RCanvas/R/clean_env.R")
+}
+
+
+
+sum_up<-function() {
+  source("~/Canvas Data/RCanvas/R/resume.R")
+}
+
+
+
+
+visualice<-function(){
+  rmarkdown::run("~/Canvas Data/RCanvas/visualiceR.Rmd")
+}
+
+
+import_data()
+enrolling()
+sum_up()
+clean_env()
+visualice()
+
+
+
+
