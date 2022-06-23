@@ -26,33 +26,3 @@ shell('canvasDataCli fetch -c config.js -t course_dim')
 shell('canvasDataCli unpack -c config.js -f course_dim')
 shell('canvasDataCli fetch -c config.js -t course_section_dim')
 shell('canvasDataCli unpack -c config.js -f course_section_dim')
-
-
-
-clean_env<-function() {
-  source("~/Canvas Data/RCanvas/R/clean_env.R")
-}
-
-
-
-sum_up<-function() {
-  source("~/Canvas Data/RCanvas/R/resume.R")
-}
-
-
-
-
-visualice<-function(){
-  rmarkdown::run("~/Canvas Data/RCanvas/visualiceR.Rmd")
-}
-
-
-import_data()
-enrolling()
-sum_up()
-clean_env()
-visualice()
-
-
-
-
